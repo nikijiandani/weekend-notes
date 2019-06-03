@@ -67,3 +67,16 @@ Use array destructuring.
 
 Use object destructuring for multiple return values, not array destructuring.
 
+### Strings
+
+Use single quotes '' for strings.
+
+Strings that cause the line to go over 100 characters should not be written across multiple lines using string concatenation.
+Why? Broken strings are painful to work with and make code less searchable.
+
+When programmatically building up strings, use template strings instead of concatenation.
+
+Never use eval() on a string, it opens too many vulnerabilities.
+
+Do not unnecessarily escape characters in strings.
+
