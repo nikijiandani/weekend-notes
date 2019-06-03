@@ -40,5 +40,21 @@ Do not call Object.prototype methods directly, such as hasOwnProperty, propertyI
 
 Prefer the object spread operator over Object.assign to shallow-copy objects. Use the object rest operator to get a new object with certain properties omitted.
 
+### Arrays
 
+Use the literal syntax for array creation.
+
+Use Array#push instead of direct assignment to add items to an array.
+
+Use array spreads ... to copy arrays.
+
+To convert an iterable object to an array, use spreads ... instead of Array.from.
+
+Use Array.from for converting an array-like object to an array.
+
+Use Array.from instead of spread ... for mapping over iterables, because it avoids creating an intermediate array.
+
+Use return statements in array method callbacks. It’s ok to omit the return if the function body consists of a single statement returning an expression without side effects.
+
+Use line breaks after open and before close array brackets if an array has multiple lines.
 
