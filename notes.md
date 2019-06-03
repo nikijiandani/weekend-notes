@@ -58,3 +58,12 @@ Use return statements in array method callbacks. It’s ok to omit the return if
 
 Use line breaks after open and before close array brackets if an array has multiple lines.
 
+### Destructuring
+
+Use object destructuring when accessing and using multiple properties of an object.
+Why? Destructuring saves you from creating temporary references for those properties.
+
+Use array destructuring.
+
+Use object destructuring for multiple return values, not array destructuring.
+
