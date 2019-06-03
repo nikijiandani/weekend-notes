@@ -80,3 +80,39 @@ Never use eval() on a string, it opens too many vulnerabilities.
 
 Do not unnecessarily escape characters in strings.
 
+### Functions
+
+Use named function expressions instead of function declarations.
+
+Wrap immediately invoked function expressions in parentheses.
+
+Never declare a function in a non-function block (if, while, etc). Assign the function to a variable instead. Browsers will allow you to do it, but they all interpret it differently, which is bad news bears.
+
+Note: ECMA-262 defines a block as a list of statements. A function declaration is not a statement.
+
+Never name a parameter arguments. This will take precedence over the arguments object that is given to every function scope.
+
+Never use arguments, opt to use rest syntax ... instead. 
+Why? ... is explicit about which arguments you want pulled. Plus, rest arguments are a real Array, and not merely Array-like like arguments.
+
+Use default parameter syntax rather than mutating function arguments.
+
+Avoid side effects with default parameters.
+
+Always put default parameters last.
+
+Never use the Function constructor to create a new function.
+
+Spacing in a function signature.
+Why? Consistency is good, and you shouldn’t have to add or remove a space when adding or removing a name.
+
+Never mutate parameters.
+Why? Manipulating objects passed in as parameters can cause unwanted variable side effects in the original caller.
+
+Never reassign parameters.
+Why? Reassigning parameters can lead to unexpected behavior, especially when accessing the arguments object. It can also cause optimization issues, especially in V8.
+
+Prefer the use of the spread operator ... to call variadic functions.
+
+Functions with multiline signatures, or invocations, should be indented just like every other multiline list in this guide: with each item on a line by itself, with a trailing comma on the last item.
+
